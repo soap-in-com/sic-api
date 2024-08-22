@@ -1,0 +1,39 @@
+{
+  "name": "sic-server",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "dev": "ts-node-dev -r dotenv/config ./src",
+    "serve": "node -r dotenv/config ./dist"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-useragent": "^1.0.15",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "http-errors": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/express-useragent": "^1.0.5",
+    "@types/http-errors": "^2.0.4",
+    "@types/node": "^22.5.0",
+    "@typescript-eslint/eslint-plugin": "^8.2.0",
+    "@typescript-eslint/parser": "^8.2.0",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "5.5.4"
+  },
+  "packageManager": "yarn@4.0.1"
+}
