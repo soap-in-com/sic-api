@@ -4,6 +4,7 @@ import useragent from 'express-useragent'
 import helmet from 'helmet'
 import createError, { HttpError } from 'http-errors'
 import { healthzPath, healthzRouter } from './routes/healthz'
+import { userPath, userRouter } from './routes/user'
 
 export function initApp() {
   const app = express()
@@ -15,6 +16,9 @@ export function initApp() {
   app.use(useragent.express())
   app.use(express.json())
   app.use(express.urlencoded({ extended: true }))
+
+  // 회원 관련 처리 라우터 사용
+  app.use(userPath, userRouter)
 
   app.options(
     '*',
