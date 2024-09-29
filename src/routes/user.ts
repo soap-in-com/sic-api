@@ -1,4 +1,6 @@
 import { NextFunction, Request, Response, Router } from 'express';
+import rateLimit from 'express-rate-limit'; // express-rate-limit 타입 임포트
+import jwt, { JwtPayload } from 'jsonwebtoken'; // jsonwebtoken 타입 임포트
 import { db } from '../database';
 
 export const userPath = '/user'
